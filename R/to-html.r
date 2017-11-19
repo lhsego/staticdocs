@@ -257,9 +257,17 @@ make_link <- function(loc, label, pkg = NULL) {
   if (is.null(loc$package)) {
     str_c("<a href='", loc$file, "'>", label, "</a>")
   } else {
-    str_c("<a href='http://www.inside-r.org/packages/cran/", loc$package,
-      "/docs/", loc$topic, "'>", label, "</a>")
+    # point to Data Camp's R documentation website
+    str_c("<a href='http://www.rdocumentation.org/packages/", loc$package,
+      "/topics/", loc$topic, "'>", label, "</a>")
   }
+    
+  ## if (is.null(loc$package)) {
+  ##   str_c("<a href='", loc$file, "'>", label, "</a>")
+  ## } else {
+  ##   str_c("<a href='http://www.inside-r.org/packages/cran/", loc$package,
+  ##     "/docs/", loc$topic, "'>", label, "</a>")
+  ## }
 }
 
 # Miscellaneous --------------------------------------------------------------
