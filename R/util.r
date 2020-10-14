@@ -1,12 +1,13 @@
-#' @importFrom devtools dev_meta
+# As of 2020-10-14, dev_meta is no longer exported from devtools
+# @importFrom devtools dev_meta
 inst_path <- function() {
-  if (is.null(dev_meta("staticdocs"))) {
+#  if (is.null(dev_meta("staticdocs"))) {
     # staticdocs is probably installed
     system.file(package = "staticdocs")
-  } else {
+#  } else {
     # staticdocs was probably loaded with devtools
-    file.path(getNamespaceInfo("staticdocs", "path"), "inst")
-  }
+#    file.path(getNamespaceInfo("staticdocs", "path"), "inst")
+#  }
 }
 
 # Return the staticdocs path for a package
